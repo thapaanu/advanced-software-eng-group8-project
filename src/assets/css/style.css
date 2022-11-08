@@ -1,0 +1,150 @@
+.red{
+  background-color: #de0f3f;
+}
+
+.pink{
+  background-color: #e61f93;
+}
+
+.light-pink{
+  background-color: #ffc0cb;
+}
+
+.blue{
+  background-color: #56aeff;
+}
+
+.lime-green{
+  background-color: #ebf094;
+}
+
+.purple{
+  background-color: #a359a0;
+}
+
+.lilac{
+  background-color: #b1a1ed;
+}
+
+.green{
+  background-color: #81a969;
+}
+
+.dark-green{
+  background-color: #33443c;
+}
+
+.orange{
+  background-color: #f9943b;
+}
+
+.maroon{
+  background-color: #9f2b00;
+}
+
+.dark-blue{
+  background-color: #145da0;
+}
+
+.cell {
+  height: 35px;
+  width: 35px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.solcontainer {
+  padding: 20px 30px;
+}
+
+.getsolutionscontainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.shapes-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shapes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected-shape {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.submitbtn {
+  width: 300px;
+  height: 90px;
+  background-color: #0072f5;
+  border-radius: 35px;
+  opacity: 70%;
+  outline: none;
+  border: none;
+  font-size: x-large;
+}
+.nextbtn {
+  margin: 10px;
+}
+.blocks-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.block {
+  width: 5%;
+  height: 80px;
+  border-radius: 10px;
+  background: #000000;
+  opacity: 70%;
+  margin: 5px;
+}
+.white-block {
+  width: 5%;
+  height: 80px;
+  border-radius: 10px;
+  background: #7e7b7b;
+  opacity: 70%;
+  margin: 5px;
+}
+
+.pink-block {
+  width: 5%;
+  height: 80px;
+  border-radius: 10px;
+  background: #944040;
+  opacity: 70%;
+  margin: 5px;
+}
+.ctrlbtn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.ctrlbtn {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #0072f5;
+  border-radius: 35px;
+  opacity: 70%;
+  font-size: x-large;
+  outline: none;
+  border: none;
+}
+.playground {
+  margin-top: 50px;
+}
