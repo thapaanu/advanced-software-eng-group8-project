@@ -36,7 +36,7 @@ function App() {
       }
       board.push(row);
     }
-    
+
     let invalid_shapes = [];
 
     for (let i=0; i<data.length; i++) {
@@ -192,29 +192,29 @@ function App() {
           </div>
         </div>
         <button className="submitbtn" onClick={handleSubmit}>
-          submit
+          Submit
         </button>
         <div className="ctrlbtn-wrapper">
           <button className="ctrlbtn" onClick={() => handleMove("up")}>
-            up
+            Up
           </button>
           <button className="ctrlbtn" onClick={() => handleMove("left")}>
-            left
+            Left
           </button>
           <button className="ctrlbtn" onClick={() => handleMove("right")}>
-            right
+            Right
           </button>
           <button className="ctrlbtn" onClick={() => handleMove("down")}>
-            down
+            Down
           </button>
           <button
             className="ctrlbtn"
             onClick={() => handleSelectMove("previous")}
           >
-            prev
+            Prev
           </button>
           <button className="ctrlbtn" onClick={() => handleSelectMove("next")}>
-            next
+            Next
           </button>
         </div>
       </div>
