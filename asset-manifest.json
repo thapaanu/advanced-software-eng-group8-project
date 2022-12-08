@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/advanced-software-eng-group8-project/static/css/main.e6295ba9.css",
+    "main.js": "/advanced-software-eng-group8-project/static/js/main.9be3d864.js",
+    "static/js/787.33e3f961.chunk.js": "/advanced-software-eng-group8-project/static/js/787.33e3f961.chunk.js",
+    "static/media/8.png": "/advanced-software-eng-group8-project/static/media/8.2d476bf2f751ad084666.png",
+    "static/media/12.png": "/advanced-software-eng-group8-project/static/media/12.139b414e652ed41b815f.png",
+    "static/media/9.png": "/advanced-software-eng-group8-project/static/media/9.a047cf28735a4b2e4925.png",
+    "static/media/4.png": "/advanced-software-eng-group8-project/static/media/4.0423a7624234638468a8.png",
+    "static/media/7.png": "/advanced-software-eng-group8-project/static/media/7.a548e64a20d0d90f4748.png",
+    "static/media/5.png": "/advanced-software-eng-group8-project/static/media/5.3cf73b865f4c9ce0c2da.png",
+    "static/media/6.png": "/advanced-software-eng-group8-project/static/media/6.620471bccc8d5a40e087.png",
+    "static/media/10.png": "/advanced-software-eng-group8-project/static/media/10.90c2935a676a16edaa29.png",
+    "static/media/3.png": "/advanced-software-eng-group8-project/static/media/3.38ea316970d05a418498.png",
+    "static/media/2.png": "/advanced-software-eng-group8-project/static/media/2.b08097aea93cf017d6d2.png",
+    "static/media/barriecito-all-400-normal.woff": "/advanced-software-eng-group8-project/static/media/barriecito-all-400-normal.cb5e84fa4bfb0be203ec.woff",
+    "static/media/11.png": "/advanced-software-eng-group8-project/static/media/11.ce9c8b9bced284f8fa7b.png",
+    "static/media/1.png": "/advanced-software-eng-group8-project/static/media/1.4d25ded510c1da1d717e.png",
+    "static/media/barriecito-latin-400-normal.woff2": "/advanced-software-eng-group8-project/static/media/barriecito-latin-400-normal.bcafb0874bb2350342df.woff2",
+    "static/media/barriecito-latin-ext-400-normal.woff2": "/advanced-software-eng-group8-project/static/media/barriecito-latin-ext-400-normal.4bc35beeac1d0e12c2bd.woff2",
+    "static/media/barriecito-vietnamese-400-normal.woff2": "/advanced-software-eng-group8-project/static/media/barriecito-vietnamese-400-normal.05d809a7189e72f71e2d.woff2",
+    "static/media/worker.js": "/advanced-software-eng-group8-project/static/media/worker.90972af5ffa5f13ccfc5.js",
+    "index.html": "/advanced-software-eng-group8-project/index.html",
+    "main.e6295ba9.css.map": "/advanced-software-eng-group8-project/static/css/main.e6295ba9.css.map",
+    "main.9be3d864.js.map": "/advanced-software-eng-group8-project/static/js/main.9be3d864.js.map",
+    "787.33e3f961.chunk.js.map": "/advanced-software-eng-group8-project/static/js/787.33e3f961.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6295ba9.css",
+    "static/js/main.9be3d864.js"
+  ]
+}
