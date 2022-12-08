@@ -1,3 +1,33 @@
+.heading {
+  font-family: "Barriecito", cursive;
+  font-weight: 400;
+}
+
+.shape-cell {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.shape-row {
+  display: flex;
+}
+
+.selected-container {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.shape-container:hover{
+  cursor: pointer;
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.shape-container {
+  padding: 10px;
+}
+
 .red{
   background-color: #de0f3f;
 }

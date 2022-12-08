@@ -12,7 +12,7 @@ let worker;
 
 let solutionsPerRow = 5;
 
-function App() {
+function PolysphereUI() {
   const INITIAL_BLOCK = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -265,4 +265,4 @@ function App() {
   );
 }
 
-export default App;
+export default PolysphereUI;

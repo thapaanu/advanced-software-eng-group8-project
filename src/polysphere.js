@@ -74,7 +74,6 @@ const compareLayout = (l1, l2) => {
     if (l1[i][0] !== l2[i][0]) return false;
     if (l1[i][1] !== l2[i][1]) return false;
   }
-
   return true;
 }
 
@@ -84,7 +83,6 @@ const duplicate = (layouts, layout) => {
       return true;
     }
   }
-
   return false;
 }
 
@@ -109,7 +107,6 @@ const rotate = layout => {
 }
 
 export const solve = (board, invalid_shapes, setSolutions) => {
-
   let all_layouts = [];
   let layouts, layout;
   for (let i=0; i<SHAPE_DATA.length; i++) {
