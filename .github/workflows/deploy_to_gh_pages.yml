@@ -2,7 +2,7 @@ name: Deploy ASE app to GitHub pages
 
 on:
   push:
-    branches: main
+    branches: master
     paths-ignore:
       - "**.md"
 
