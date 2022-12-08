@@ -53,5 +53,6 @@
     "gh-pages": "^4.0.0",
     "jest": "^29.3.1",
     "react-test-renderer": "^18.2.0"
-  }
+  },
+  "homepage": "https://thapaanu.github.io/advanced-software-eng-group8-project/"
 }
