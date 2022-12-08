@@ -52,7 +52,7 @@ function PyramidUI() {
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
-    if (solutions.length > 0) {
+    if (solutions.length > 0 && solutionIndex > -1) {
       setPyramid(solutions[solutionIndex]);
     }
   }, [solutionIndex, solutions]);
@@ -253,7 +253,8 @@ function PyramidUI() {
             newBlockPositions.push([...newPosition]);
           }
           else {
-            console.log("Cannot move block");
+            setNotification("Cannot move block.");
+            setShowNotification(true);
             newBlockPositions.push([...prevBlockPositions[i]]);
           }
 
