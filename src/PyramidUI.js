@@ -6,8 +6,13 @@ import { Sphere } from './Sphere';
 
 import { solve, stopSolve, flipPoints, rotatePoints } from './pyramid';
 
+import { validPoints } from './constants/validPoints';
+
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stage } from "@react-three/drei";
+
+import { ShapeGrid } from './components/ShapeGrid';
+import { AllTabs } from './components/AllTabs';
 
 import { Box, Grid, IconButton, Tooltip, Typography, Snackbar, Alert } from "@mui/material";
 
@@ -27,6 +32,7 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import HeightIcon from '@mui/icons-material/Height';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 import '@fontsource/barriecito/400.css';
 
@@ -51,6 +57,8 @@ function PyramidUI() {
   const [notification, setNotification] = useState("");
   const [showNotification, setShowNotification] = useState(false);
 
+  const [selectedTab, setSelectedTab] = useState(0);
+
   useEffect(() => {
     if (solutions.length > 0 && solutionIndex > -1) {
       setPyramid(solutions[solutionIndex]);
@@ -65,7 +73,7 @@ function PyramidUI() {
         for (let y=0; y<5; y++){
           let col = [];
           for (let z=0; z<5; z++){
-            if (isPresentInPyramid(x, y, z)) {
+            if (isPresentInPyramid(validPoints[selectedTab], x, y, z)) {
               col.push(0);
             }
             else {
@@ -99,13 +107,16 @@ function PyramidUI() {
       }
       return newPyramid;
     });
-  }, [blockPositions, blockRotationsFlips]);
+  }, [blockPositions, blockRotationsFlips, selectedTab]);
 
-  const isPresentInPyramid = (row, col, height) => {
-    if (row < 0 || col < 0 || height < 0) {
-      return false;
+  const isPresentInPyramid = (currentValidPoints, row, col, height) => {
+    for (let i=0; i<currentValidPoints.length; i++) {
+      let point = currentValidPoints[i];
+      if (point[0] === parseInt(row) && point[1] === parseInt(col) && point[2] === parseInt(height)) {
+        return true;
+      }
     }
-    return row <= 4-col && height <= 4-col;
+    return false;
   }
 
   const getMaxRow = points => {
@@ -200,7 +211,7 @@ function PyramidUI() {
         return false;
       }
 
-      if (!isPresentInPyramid(position[0], position[1], position[2])) {
+      if (!isPresentInPyramid(validPoints[selectedTab], position[0], position[1], position[2])) {
           return false;
       }
 
@@ -285,49 +296,34 @@ function PyramidUI() {
 
   return (
     <Grid container>
-      <Grid item container sm={12}>
-        <Typography variant="h3" className="heading">
-          Polysphere Puzzle
+      <Grid item container sm={12} direction='row-reverse'>
+        <Typography style={{fontFamily: 'Silkscreen'}} variant="h3" className="heading">
+          Puzzles
         </Typography>
       </Grid>
       <Grid item container gap={2} sm={4}>
-        {
-          SHAPE_DATA.map((shape, index) => (
-            <Grid
-              key={shape.name}
-              item sm={3}
-              className={`shape-container ${selectedShape === index+1 && "selected-container"}`}
-              onClick={() => setSelectedShape(parseInt(shape.name.substr(5)))}
-            >
-              {
-                Object.keys([...Array(getMaxRow(shape.points)+1)]).map(row => (
-                  <Box className="shape-row" key={row}>
-                    {
-                      Object.keys([...Array(getMaxColumn(shape.points)+1)]).map(col => (
-                        <Box key={row+""+col} className={`shape-cell ${isPositionInShape(shape.points, row, col) && shape.color}`}></Box>
-                      ))
-                    }
-                  </Box>
-                ))
-              }
-              <Box>
-                <Tooltip title="Add to pyramid" arrow>
-                  <IconButton size="small" onClick={() => addToPyramid(parseInt(shape.name.substr(5)))}>
-                    <AddIcon fontSize="small" />
-                  </IconButton>
-                </Tooltip>
-                <Tooltip title="Remove from pyramid" arrow>
-                  <IconButton size="small" onClick={() => removeFromPyramid(parseInt(shape.name.substr(5)))}>
-                    <RemoveCircleOutlineIcon fontSize="small" />
-                  </IconButton>
-                </Tooltip>
-              </Box>
-            </Grid>
-          ))
-        }
+        <ShapeGrid
+          selectedShape={selectedShape}
+          setSelectedShape={setSelectedShape}
+          getMaxRow={getMaxRow}
+          getMaxColumn={getMaxColumn}
+          isPositionInShape={isPositionInShape}
+          addToPyramid={addToPyramid}
+          removeFromPyramid={removeFromPyramid}
+        />
       </Grid>
-      <Grid item sm={8}>
-        <Box style={{height: "500px"}}>
+      <Grid container item sm={8} justifyContent="flex-start" alignItems="center">
+        <Grid item>
+          <AllTabs tabs={["Pyramid", "Roof"]} selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        </Grid>
+        <Grid item>
+          <Tooltip title="Refresh Page" arrow>
+            <IconButton size="small" onClick={() => { window.location.reload() }}>
+              <RefreshIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        </Grid>
+        <Grid item sm={12} style={{height: "500px"}}>
           {
             solutions.length > 0 &&
             <Grid container justifyContent="flex-end">
@@ -358,7 +354,7 @@ function PyramidUI() {
               </Stage>
             </Canvas>
           }
-        </Box>
+        </Grid>
         <Grid container>
           <Grid item sm={4}>
             <Grid container justifyContent="center">
@@ -523,6 +519,7 @@ function PyramidUI() {
           </Grid>
         </Grid>
       </Grid>
+
 
       <Snackbar anchorOrigin={{vertical: 'top', horizontal: 'right'}} open={showNotification} autoHideDuration={6000} onClose={handleHideNotification}>
         <Alert onClose={handleHideNotification} severity="success" sx={{ width: '100%' }}>
