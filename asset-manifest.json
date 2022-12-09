@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/advanced-software-eng-group8-project/static/css/main.e6295ba9.css",
-    "main.js": "/advanced-software-eng-group8-project/static/js/main.3a4c3f4d.js",
+    "main.js": "/advanced-software-eng-group8-project/static/js/main.6821d07d.js",
     "static/js/787.33e3f961.chunk.js": "/advanced-software-eng-group8-project/static/js/787.33e3f961.chunk.js",
     "static/media/8.png": "/advanced-software-eng-group8-project/static/media/8.2d476bf2f751ad084666.png",
     "static/media/12.png": "/advanced-software-eng-group8-project/static/media/12.139b414e652ed41b815f.png",
@@ -22,11 +22,11 @@
     "static/media/worker.js": "/advanced-software-eng-group8-project/static/media/worker.90972af5ffa5f13ccfc5.js",
     "index.html": "/advanced-software-eng-group8-project/index.html",
     "main.e6295ba9.css.map": "/advanced-software-eng-group8-project/static/css/main.e6295ba9.css.map",
-    "main.3a4c3f4d.js.map": "/advanced-software-eng-group8-project/static/js/main.3a4c3f4d.js.map",
+    "main.6821d07d.js.map": "/advanced-software-eng-group8-project/static/js/main.6821d07d.js.map",
     "787.33e3f961.chunk.js.map": "/advanced-software-eng-group8-project/static/js/787.33e3f961.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6295ba9.css",
-    "static/js/main.3a4c3f4d.js"
+    "static/js/main.6821d07d.js"
   ]
 }
